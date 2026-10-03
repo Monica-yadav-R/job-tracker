@@ -1,0 +1,387 @@
+*{
+    box-sizing: border-box;
+}
+
+#main-title {
+    margin: 20px auto;
+    text-align: center;
+    background: rgb(51, 182, 248);
+    border: 2px solid black;
+    font-size:40px;
+    font-weight:700;
+    border-radius:10px ;
+    color: white;
+    padding: 10px;
+    width: 300px;
+}
+
+body{
+    background-color: #f5f5f5;
+    font-family:arial,sans-serif;
+}
+
+.hero{
+    max-width:1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.hero p{
+    text-align:center;
+}
+
+#add-job-btn {
+    text-align:center;
+    background-color:aquamarine;
+    padding:12px;
+    border: 1px solid white;
+    border-radius:6px;
+    width: 150px;
+    margin: 0 auto;
+    display:block;
+    cursor:pointer;
+    font-size:16px;
+    font-weight: 600;
+    transition:background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#add-job-btn:hover{
+    background-color:darkcyan;
+}
+
+.applications{
+    max-width: 1000px;
+    margin:30px auto;
+    background-color:white;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    gap: 15px;
+    align-items:stretch;
+    justify-content:flex-start;
+}
+
+.section-title{
+    font-size: 28px;
+    font-weight:600;
+    color: #222;
+    margin-bottom:20px;
+}
+
+section:has(#job-form) {
+    max-width: 700px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#form-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#job-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.job-card{
+    padding:20px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: 250px;
+}
+
+.job-card h3{
+    font-size: 20px;
+    color:#222;
+}
+
+.job-card p{
+    color:#666;
+    margin-bottom: 8px;
+}
+
+.job-cards{
+    display:grid;
+    column-gap: 30px;
+    row-gap: 15px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 12px;
+    background-color:darkcyan;
+    color: white;
+    border:none;
+    border-radius:6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #006666;
+}
+@media (max-width: 600px) {
+    #main-title {
+        font-size: 28px;
+    }
+
+    #add-job-btn {
+        width: 100%;
+    }
+
+    #job-form {
+    width: 100%;
+    padding: 0 15px;
+    }
+    .hero {
+        padding: 10px;
+    }
+    .job-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .search-group,
+    .filter-group {
+        width: 100%;
+    }
+}
+
+.status-applied {
+    font-weight: 600;
+    color: darkcyan;
+}
+
+.status-interview {
+    font-weight: 600;
+    color: darkorange;
+}
+
+.status-offer {
+    font-weight: 600;
+    color: green;
+}
+
+.status-rejected {
+    font-weight: 600;
+    color: crimson;
+}
+
+.status-saved {
+    font-weight: 600;
+    color: gray;
+}
+
+.status-withdrawn {
+    font-weight: 600;
+    color:#006666;
+}
+
+.delete-btn {
+    background-color: #ffe5e5;
+    color: #c62828;
+    padding: 8px 14px;
+    border: 1px solid #c62828;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.2s, color 0.2s;
+    margin-right: 12px;
+}
+
+.delete-btn:hover {
+    background-color: #c62828;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 8px 14px;
+    border: 1px solid #1565c0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-right: 12px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.edit-btn:hover {
+    background-color: #1565c0;
+    color: white;
+}
+
+#cancel-edit-btn {
+    background-color: #f5f5f5;
+    color: #555;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#cancel-edit-btn:hover {
+    background-color: #ddd;
+    color: #222;
+}
+
+.job-controls {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto 30px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.search-group,
+.filter-group {
+    flex: 1;
+}
+
+
+.search-group label,
+.filter-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-box:focus-within {
+    border-color: darkcyan;
+    box-shadow: 0 0 0 3px rgba(0, 139, 139, 0.15);
+}
+
+.search-box span {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+#search-input {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+#status-filter,
+#sort-jobs {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#status-filter:focus,
+#sort-jobs:focus {
+    border-color: darkcyan;
+    box-shadow: 0 0 0 3px rgba(0, 139, 139, 0.15);
+}
+
+#dashboard-button {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#dashboard-button:hover {
+    background-color: #555;
+}
+
+#logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#logout-button:hover {
+    background-color: #555;
+}

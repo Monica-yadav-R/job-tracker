@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+}
+
+main > p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    text-align: center;
+    color: #666;
+}
+
+#statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 25px;
+
+    background-color: white;
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h2 {
+    margin: 0 0 15px;
+
+    font-size: 18px;
+}
+
+.stat-card p {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#jobs-button {
+    display: block;
+    width: 250px;
+
+    margin: 40px auto 0;
+    padding: 12px;
+
+    border-radius: 6px;
+
+    background-color: #333;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+#jobs-button:hover {
+    background-color: #555;
+}
+
+#logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#logout-button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 800px) {
+    #statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #statistics {
+        grid-template-columns: 1fr;
+    }
+}
