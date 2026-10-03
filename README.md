@@ -265,7 +265,4 @@ Possible future improvements include:
 
 ```
 
-**Task:** Copy this section into your `README.md` below the sections you already have. Save the file.
-
-Then tell me **done**. After that, we'll do the Git preparation rather than adding more features.
 ```
