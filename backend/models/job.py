@@ -1,5 +1,6 @@
 from sqlalchemy.orm import DeclarativeBase,Mapped,mapped_column
 from sqlalchemy import ForeignKey
+from datetime import date
 
 class Base(DeclarativeBase):
     pass
@@ -13,6 +14,6 @@ class Job(Base):
     location:Mapped[str|None]
     salary:Mapped[int | None]
     status:Mapped[str]
-    application_date:Mapped[str]
+    application_date:Mapped[date]
 
     user_id:Mapped[int] = mapped_column(ForeignKey("users.id"))
