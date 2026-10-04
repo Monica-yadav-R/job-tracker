@@ -16,19 +16,8 @@ from backend.models.user import User
 
 from backend.dependencies import get_current_user
 
-from sqlalchemy import select,and_,func,text
+from sqlalchemy import select,and_,func
 
-# Base.metadata.create_all(bind=engine)
-# app = FastAPI()
-if not engine.url.drivername.startswith("sqlite"):
-    with engine.begin() as connection:
-        connection.execute(
-            text("""
-                ALTER TABLE job
-                ALTER COLUMN application_date TYPE DATE
-                USING application_date::date
-            """)
-        )
 Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
